@@ -1,0 +1,35 @@
+/* ASSETS PAGE */
+.container {
+  padding: 40px;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.asset-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.asset-card h3 {
+  margin-bottom: 8px;
+}
+
+.asset-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.btn-secondary {
+  border: 1px solid black;
+  background: white;
+  padding: 6px 12px;
+  cursor: pointer;
+}
