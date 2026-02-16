@@ -5,25 +5,11 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/LeaseIT/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>frontend</title>
+  <title>LeaseIT - Smart Asset Leasing</title>
+  <meta name="description" content="The smartest way to lease machinery, assets, and plants online." />
   <script type="module" crossorigin src="/LeaseIT/assets/index-DiD14-1Z.js"></script>
   <link rel="stylesheet" crossorigin href="/LeaseIT/assets/index-CvaBlKIE.css">
 </head>
-<script>
-  window.addEventListener('error', function (e) {
-    var msg = '';
-    if (e.target && (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK')) {
-      msg = 'Resource Load Error: ' + (e.target.src || e.target.href);
-    } else {
-      msg = 'Error: ' + (e.message || e);
-    }
-    console.error(msg);
-    var box = document.createElement('div');
-    box.style.cssText = 'color:red; background:white; padding:20px; z-index:99999; position:fixed; top:0; left:0; width:100%; border-bottom: 2px solid black; font-family: monospace;';
-    box.innerHTML = '<h3>' + msg + '</h3>';
-    document.body.appendChild(box);
-  }, true); 
-</script>
 
 <body>
   <div id="root"></div>
