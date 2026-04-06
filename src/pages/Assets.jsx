@@ -1,15 +1,18 @@
 import { useState } from "react";
-import { Search, Filter } from "lucide-react";
+import { Search, Filter, Loader2 } from "lucide-react";
 import ListingCard from "../components/ListingCard";
-import { mockListings } from "../data/mockData";
+import SEO from "../components/SEO";
+import { useListings } from "../context/ListingsContext";
 
 export default function Assets() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
+  const { listings } = useListings();
+
   const categories = ["All", "Vehicles", "Heavy Machinery", "Electronics", "Furniture"];
 
-  const filteredListings = mockListings.filter((listing) => {
+  const filteredListings = listings.filter((listing) => {
     const matchesSearch = listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       listing.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "All" || listing.category === selectedCategory;
@@ -19,6 +22,11 @@ export default function Assets() {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <SEO
+        title="Browse Assets"
+        description="Explore our wide range of assets available for lease. From vehicles to electronics, find what you need."
+      />
+
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
         <h1 className="text-3xl font-bold text-gray-900">Browse Assets</h1>
 
