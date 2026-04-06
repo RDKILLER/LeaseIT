@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <AuthProvider>
         <ListingsProvider>
-          <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <BrowserRouter>
             <App />
           </BrowserRouter>
         </ListingsProvider>

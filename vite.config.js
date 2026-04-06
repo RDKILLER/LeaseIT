@@ -30,7 +30,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/LeaseIT/',
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
